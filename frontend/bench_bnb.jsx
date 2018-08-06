@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom';
 import {signup, login, logout} from './actions/session_actions';
 import configureStore from './store/store';
 import Root from './components/root';
-
+import {fetchSits} from './actions/sit_actions';
 
 
 document.addEventListener('DOMContentLoaded', ()=> {
   window.login = login;
   window.logout = logout;
-  // const store = configureStore();
-  // window.store = store;
+  window.fetchSits = fetchSits;
   let store;
   if (window.currentUser) {
     const preloadedState = {
@@ -24,6 +23,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
   } else {
     store = configureStore();
   }
+  window.dispatch = store.dispatch;
+  window.getState = store.getState;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);
 });
