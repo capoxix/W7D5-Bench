@@ -13,7 +13,7 @@ class SitIndex extends React.Component {
   render() {
     // console.log(this.props);
 
-    let sits = Object.values(this.props.sits).map(sit => (<SitIndexItem sit={sit}/>));
+    let sits = Object.values(this.props.sits).map(sit => (<SitIndexItem key={sit.id} sit={sit}/>));
 
     return (
       <div>
