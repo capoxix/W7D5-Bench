@@ -11,9 +11,9 @@ class SitIndex extends React.Component {
   }
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
 
-    let sits = this.props.sits.map(sit => (<SitIndexItem sit={sit}/>));
+    let sits = Object.values(this.props.sits).map(sit => (<SitIndexItem sit={sit}/>));
 
     return (
       <div>
