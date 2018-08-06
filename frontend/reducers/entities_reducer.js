@@ -4,7 +4,7 @@ import sitsReducer from './sits_reducer';
 
 const entitiesReducer = combineReducers({
   users: usersReducer,
-  sits : sitsReducer
+  sits: sitsReducer
 });
 
 export default entitiesReducer;
