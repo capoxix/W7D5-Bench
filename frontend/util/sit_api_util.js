@@ -6,9 +6,10 @@ export const createSit= sit => {
   });
 };
 
-export const getSits = () => {
+export const fetchSits = () => {
   return $.ajax({
     method: "GET",
     url: "/api/sits",
+    error: (err) => console.log(err)
   });
 };
