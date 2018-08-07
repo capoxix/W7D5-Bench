@@ -11,7 +11,7 @@ class SitMap extends React.Component {
     };
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
-    // this.MarkerManager.updateMarkers(this.props.sits);
+    //this.MarkerManager.updateMarkers(this.props.sits);
   }
 
   render(){
