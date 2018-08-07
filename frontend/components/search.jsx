@@ -6,7 +6,7 @@ class Search extends React.Component{
   render(){
     return(
       <div>
-        <SitMap />
+        <SitMap sits={this.props.sits} fetchSits={this.props.fetchSits}/>
         <SitIndex sits={this.props.sits} fetchSits={this.props.fetchSits} />
       </div>
     );
